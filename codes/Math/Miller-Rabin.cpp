@@ -3,24 +3,20 @@ bool is_prime(ll n, vector<ll> x) {
 	d >>= __builtin_ctzll(d);
 	for(auto a : x) {
 		if(n <= a) break;
-		ll t = d;
-		ll y = 1, b = t;
+		ll t = d, y = 1, b = t;
 		while(b) {
-			if(b & 1) y = __int128(y) * a % n;
-			a = __int128(a) * a % n;
+			if(b & 1) y = i128(y) * a % n;
+			a = i128(a) * a % n;
 			b >>= 1;
 		}
 		while(t != n - 1 && y != 1 && y != n - 1) {
-			y = __int128(y) * y % n;
+			y = i128(y) * y % n;
 			t <<= 1;
 		}
-		if(y != n - 1 && t % 2 == 0) {
-			return false;
-		}
+		if(y != n - 1 && t % 2 == 0) return false;
 	}
 	return true;
 }
-
 bool is_prime(ll n) {
 	if(n <= 1) return false;
 	if(n % 2 == 0) return n == 2;

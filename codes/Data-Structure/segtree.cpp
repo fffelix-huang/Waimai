@@ -1,16 +1,16 @@
 template<class S, S (*e)(), S (*op)(S, S)>
-class segtree {
-public:
-	segtree() : segtree(0) {}
+struct segtree {
+	int n, size, log;
+	vector<S> st;
+	void update(int v) { st[v] = op(st[v << 1], st[v << 1 | 1]); }
 	segtree(int _n) : segtree(vector<S>(_n, e())) {}
-	segtree(const vector<S>& a): n(a.size()) {
+	segtree(const vector<S>& a): n(sz(a)) {
 		log = __lg(2 * n - 1), size = 1 << log;
 		st.resize(size << 1, e());
-		for(int i = 0; i < n; i++) st[size + i] = a[i];
+		REP(i, n) st[size + i] = a[i];
 		for(int i = size - 1; i; i--) update(i);
 	}
 	void set(int p, S val) {
-		assert(0 <= p && p < n);
 		st[p += size] = val;
 		for(int i = 1; i <= log; ++i) update(p >> i);
 	}
@@ -30,9 +30,6 @@ public:
 		return op(sml, smr);
 	}
 	S all_prod() const { return st[1]; }
-	template<bool (*f)(S)> int max_right(int l) const {
-		return max_right(l, [](S x) { return f(x); });
-	}
 	template<class F> int max_right(int l, F f) const {
 		assert(0 <= l && l <= n && f(e()));
 		if(l == n) return n;
@@ -50,9 +47,6 @@ public:
 			sm = op(sm, st[l++]);
 		} while((l & -l) != l);
 		return n;
-	}
-	template<bool (*f)(S)> int min_left(int r) const {
-		return min_left(r, [](S x) { return f(x); });
 	}
 	template<class F> int min_left(int r, F f) const {
 		assert(0 <= r && r <= n && f(e()));
@@ -73,9 +67,4 @@ public:
 		} while((r & -r) != r);
 		return 0;
 	}
-	
-private:
-	int n, size, log;
-	vector<S> st;
-	void update(int v) { st[v] = op(st[v << 1], st[v << 1 | 1]); }
 };

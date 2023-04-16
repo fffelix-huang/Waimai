@@ -5,7 +5,7 @@ struct line_t {
 };
 template<bool MAX>
 struct CHT : multiset<line_t, less<>> {
-	static const ll INF = numeric_limits<ll>::max();
+	const ll INF = 1e18L;
 	bool isect(iterator x, iterator y) {
 		if(y == end()) return x->p = INF, 0;
 		if(x->k == y->k) {

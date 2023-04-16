@@ -1,8 +1,7 @@
-mt19937 rng(time(0));
 struct GeneralMaxMatch {
 	int n;
-	vector<pair<int, int>> es;
-	vector<int> g, vis, mate; // i 與 mate[i] 配對 (mate[i] == -1 代表沒有匹配)
+	vector<pii> es;
+	vi g, vis, mate; // i 與 mate[i] 配對 (mate[i] == -1 代表沒有匹配)
 	GeneralMaxMatch(int n) : n(n), g(n, -1), mate(n, -1) {}
 	bool dfs(int u) {
 		if(vis[u]) return false;
@@ -27,17 +26,17 @@ struct GeneralMaxMatch {
 	}
 	void add_edge(int a, int b) {
 		auto f = [&](int a, int b) {
-			es.emplace_back(b, g[a]);
-			g[a] = es.size() - 1;
+			es.eb(b, g[a]);
+			g[a] = sz(es) - 1;
 		};
 		f(a, b); f(b, a);
 	}
 	int solve() {
-		vector<int> o(n);
-		iota(o.begin(), o.end(), 0);
+		vi o(n);
+		iota(all(o), 0);
 		int ans = 0;
-		for(int it = 0; it < 100; ++it) {
-			shuffle(o.begin(), o.end(), rng);
+		REP(it, 100) {
+			shuffle(all(o), rng);
 			vis.assign(n, false);
 			for(auto i : o) if(mate[i] == -1) ans += dfs(i);
 		}

@@ -5,35 +5,41 @@ template<class S,
          F (*id)(),
          S (*mapping)(F, S),
          F (*composition)(F, F)>
-class lazy_segtree {
-public:
-	lazy_segtree() : lazy_segtree(0) {}
+struct lazy_segtree {
+	int n, size, log;
+	vector<S> d; vector<F> lz;
+	void update(int k) { d[k] = op(d[k << 1], d[k << 1 | 1]); }
+	void all_apply(int k, F f) {
+		d[k] = mapping(f, d[k]);
+		if(k < size) lz[k] = composition(f, lz[k]);
+	}
+	void push(int k) {
+		all_apply(k << 1, lz[k]);
+		all_apply(k << 1 | 1, lz[k]);
+		lz[k] = id();
+	}
 	lazy_segtree(int _n) : lazy_segtree(vector<S>(_n, e())) {}
-	lazy_segtree(const vector<S>& v) : n((int) v.size()) {
+	lazy_segtree(const vector<S>& v) : n(sz(v)) {
 		log = __lg(2 * n - 1), size = 1 << log;
 		d.resize(size * 2, e());
 		lz.resize(size, id());
-		for(int i = 0; i < n; i++) d[size + i] = v[i];
+		REP(i, n) d[size + i] = v[i];
 		for(int i = size - 1; i; i--) update(i);
 	}
 	void set(int p, S x) {
-		assert(0 <= p && p < n);
 		p += size;
 		for(int i = log; i; --i) push(p >> i);
 		d[p] = x;
 		for(int i = 1; i <= log; ++i) update(p >> i);
 	}
 	S get(int p) {
-		assert(0 <= p && p < n);
 		p += size;
 		for(int i = log; i; i--) push(p >> i);
 		return d[p];
 	}
 	S prod(int l, int r) {
-		assert(0 <= l && l <= r && r <= n);
 		if(l == r) return e();
-		l += size;
-		r += size;
+		l += size; r += size;
 		for(int i = log; i; i--) {
 			if(((l >> i) << i) != l) push(l >> i);
 			if(((r >> i) << i) != r) push(r >> i);
@@ -49,17 +55,14 @@ public:
 	}
 	S all_prod() const { return d[1]; }
 	void apply(int p, F f) {
-		assert(0 <= p && p < n);
 		p += size;
 		for(int i = log; i; i--) push(p >> i);
 		d[p] = mapping(f, d[p]);
 		for(int i = 1; i <= log; i++) update(p >> i);
 	}
 	void apply(int l, int r, F f) {
-		assert(0 <= l && l <= r && r <= n);
 		if(l == r) return;
-		l += size;
-		r += size;
+		l += size; r += size;
 		for(int i = log; i; i--) {
 			if(((l >> i) << i) != l) push(l >> i);
 			if(((r >> i) << i) != r) push((r - 1) >> i);
@@ -79,9 +82,6 @@ public:
 			if(((l >> i) << i) != l) update(l >> i);
 			if(((r >> i) << i) != r) update((r - 1) >> i);
 		}
-	}
-	template<bool (*g)(S)> int max_right(int l) {
-		return max_right(l, [](S x) { return g(x); });
 	}
 	template<class G> int max_right(int l, G g) {
 		assert(0 <= l && l <= n && g(e()));
@@ -103,9 +103,6 @@ public:
 		} while((l & -l) != l);
 		return n;
 	}
-	template<bool (*g)(S)> int min_left(int r) {
-		return min_left(r, [](S x) { return g(x); });
-	}
 	template<class G> int min_left(int r, G g) {
 		assert(0 <= r && r <= n && g(e()));
 		if(r == 0) return 0;
@@ -126,20 +123,5 @@ public:
 			sm = op(d[r], sm);
 		} while((r & -r) != r);
 		return 0;
-	}
-
-private:
-	int n, size, log;
-	vector<S> d;
-	vector<F> lz;
-	void update(int k) { d[k] = op(d[k << 1], d[k << 1 | 1]); }
-	void all_apply(int k, F f) {
-		d[k] = mapping(f, d[k]);
-		if(k < size) lz[k] = composition(f, lz[k]);
-	}
-	void push(int k) {
-		all_apply(k << 1, lz[k]);
-		all_apply(k << 1 | 1, lz[k]);
-		lz[k] = id();
 	}
 };

@@ -1,17 +1,17 @@
 struct bipartite_matching {
 	int n, m; // 二分圖左右人數 (0 ~ n-1), (0 ~ m-1)
-	vector<vector<int>> g;
-	vector<int> lhs, rhs, dist; // i 與 lhs[i] 配對 (lhs[i] == -1 代表沒有配對)
+	vector<vi> g;
+	vi lhs, rhs, dist; // i 與 lhs[i] 配對 (lhs[i] == -1 代表沒有配對)
 	bipartite_matching(int _n, int _m) : n(_n), m(_m), g(_n), lhs(_n, -1), rhs(_m, -1), dist(_n) {}
-	void add_edge(int u, int v) { g[u].push_back(v); }
+	void add_edge(int u, int v) { g[u].pb(v); }
 	void bfs() {
 		queue<int> q;
-		for(int u = 0; u < n; ++u) {
-			if(lhs[u] == -1) {
-				q.push(u);
-				dist[u] = 0;
+		REP(i, n) {
+			if(lhs[i] == -1) {
+				q.push(i);
+				dist[i] = 0;
 			} else {
-				dist[u] = -1;
+				dist[i] = -1;
 			}
 		}
 		while(!q.empty()) {
@@ -44,8 +44,8 @@ struct bipartite_matching {
 		while(true) {
 			bfs();
 			int aug = 0;
-			for(int u = 0; u < n; ++u) if(lhs[u] == -1) aug += dfs(u);
-			if(aug == 0) break;
+			REP(i, n) if(lhs[i] == -1) aug += dfs(i);
+			if(!aug) break;
 			ans += aug;
 		}
 		return ans;
