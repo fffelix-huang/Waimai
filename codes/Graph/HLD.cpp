@@ -1,9 +1,9 @@
 struct HLD {
 	int n;
 	vector<vi> g;
-	vi sz, par, depth, top, tour, fi, id;
+	vi siz, par, depth, top, tour, fi, id;
 	sparse_table<pii, min> st;
-	HLD(int _n) : n(_n), g(_n), sz(_n), par(_n), depth(_n), top(_n), fi(_n), id(_n) {
+	HLD(int _n) : n(_n), g(_n), siz(_n), par(_n), depth(_n), top(_n), fi(_n), id(_n) {
 		tour.reserve(n);
 	}
 	void add_edge(int u, int v) {
@@ -25,7 +25,7 @@ struct HLD {
 		return st.prod(L, R).second;
 	}
 	bool is_anc(int u, int v) {
-		return id[u] <= id[v] && id[v] < id[u] + sz[u];
+		return id[u] <= id[v] && id[v] < id[u] + siz[u];
 	}
 	bool on_path(int a, int b, int x) {
 		return (is_ancestor(x, a) || is_ancestor(x, b)) && is_ancestor(get_lca(a, b), x);
@@ -61,13 +61,13 @@ struct HLD {
 	}
 	void dfs_sz(int u) {
 		if(par[u] != -1) g[u].erase(find(all(g[u]), par[u]));
-		sz[u] = 1;
+		siz[u] = 1;
 		for(auto& v : g[u]) {
 			par[v] = u;
 			depth[v] = depth[u] + 1;
 			dfs_sz(v);
-			sz[u] += sz[v];
-			if(sz[v] > sz[g[u][0]]) swap(v, g[u][0]);
+			siz[u] += siz[v];
+			if(siz[v] > siz[g[u][0]]) swap(v, g[u][0]);
 		}
 	}
 	void dfs_link(vector<pii>& euler_tour, int u) {
