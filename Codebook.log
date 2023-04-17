@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.4.14)  17 APR 2023 03:49
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.4.14)  17 APR 2023 17:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -831,13 +831,14 @@ Overfull \hbox (42.97871pt too wide) in paragraph at lines 20--21
 sy/m/n/7 ) [][] []\OML/cmm/m/it/7 a[]a[] [] a[]$ 
  []
 
-) (./codes/Misc/PBDS.cpp)
+) (./codes/Misc/next-combination.cpp) (./codes/Misc/PBDS.cpp)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-(./codes/Misc/python.py) (./codes/Misc/readchar.cpp) (./codes/Misc/矩形覆蓋面積.cpp)
-(./codes/String/AC.cpp) (./codes/String/KMP.cpp) (./codes/String/LCP.cpp)
-(./codes/String/manacher.cpp [8]) (./codes/String/rolling-hash.cpp)
+(./codes/Misc/python.py) (./codes/Misc/readchar.cpp) (./codes/Misc/rng.cpp)
+(./codes/Misc/rotate90.cpp) (./codes/Misc/timer.cpp) (./codes/Misc/矩形覆蓋面積.cpp)
+(./codes/String/AC.cpp) (./codes/String/KMP.cpp [8]) (./codes/String/LCP.cpp)
+(./codes/String/manacher.cpp) (./codes/String/rolling-hash.cpp)
 (./codes/String/SAIS.cpp) (./codes/String/SAM.cpp)
 (./codes/String/smallest-rotation.cpp) (./codes/String/Z.cpp)) [9]
 
@@ -857,12 +858,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 11643 strings out of 481804
- 240237 string characters out of 5937876
- 1577246 words of memory out of 5000000
- 28308 multiletter control sequences out of 15000+600000
+ 11679 strings out of 481804
+ 240835 string characters out of 5937876
+ 1578392 words of memory out of 5000000
+ 28332 multiletter control sequences out of 15000+600000
  534293 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 46i,15n,69p,539b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,15n,69p,539b,2152s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Codebook.pdf (11 pages).
