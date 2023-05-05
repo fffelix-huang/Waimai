@@ -1,3 +1,4 @@
+// abacbaba -> [0, 0, 1, 0, 0, 3, 0, 1]
 vi z_algorithm(const vi& a) {
 	int n = sz(a);
 	vi z(n);

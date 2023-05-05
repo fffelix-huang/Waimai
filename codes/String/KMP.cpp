@@ -1,5 +1,6 @@
+// abacbaba -> [0, 0, 1, 0, 0, 1, 2, 3]
 vi KMP(const vi& a) {
-	int n = sz(a);
+	int n = SZ(a);
 	vi k(n);
 	for(int i = 1; i < n; ++i) {
 		int j = k[i - 1];

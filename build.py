@@ -61,6 +61,10 @@ if __name__ == '__main__':
 
     print("    There are", len(FileDict), "file(s)")
     print("[2] Prepare Codes...")
+    # system("touch Codebook.tex")
+    # system("touch Codebook.aux")
+    # system("touch Codebook.log")
+    # system("touch Codebook.toc")
     with open('list.tex', 'w', encoding="utf-8") as fout:
         texCodeGen(fout, FileDict)
 

@@ -1,5 +1,5 @@
-vector<int> lcp(const vector<int>& s, const vector<int>& sa) {
-	int n = sz(s), h = 0;
+vi lcp(const vi& s, const vi& sa) {
+	int n = SZ(s), h = 0;
 	vi rnk(n), lcp(n - 1);
 	REP(i, n) rnk[sa[i]] = i;
 	REP(i, n) {
