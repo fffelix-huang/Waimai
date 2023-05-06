@@ -24,8 +24,8 @@
 \contentsline {subsection}{\numberline {4.3}point}{5}%
 \contentsline {subsection}{\numberline {4.4}polar-angle-sort}{5}%
 \contentsline {subsection}{\numberline {4.5}最近點對}{5}%
-\contentsline {section}{\numberline {5}Graph}{5}%
-\contentsline {subsection}{\numberline {5.1}2-SAT}{5}%
+\contentsline {section}{\numberline {5}Graph}{6}%
+\contentsline {subsection}{\numberline {5.1}2-SAT}{6}%
 \contentsline {subsection}{\numberline {5.2}centroid-tree}{6}%
 \contentsline {subsection}{\numberline {5.3}HLD}{6}%
 \contentsline {subsection}{\numberline {5.4}lowlink}{6}%
@@ -36,14 +36,14 @@
 \contentsline {subsection}{\numberline {6.3}Chinese-Remainder}{7}%
 \contentsline {subsection}{\numberline {6.4}Discrete-Log}{7}%
 \contentsline {subsection}{\numberline {6.5}extgcd}{7}%
-\contentsline {subsection}{\numberline {6.6}Floor-Sum}{7}%
+\contentsline {subsection}{\numberline {6.6}Floor-Sum}{8}%
 \contentsline {subsection}{\numberline {6.7}FWHT}{8}%
 \contentsline {subsection}{\numberline {6.8}Gauss-Jordan}{8}%
 \contentsline {subsection}{\numberline {6.9}Linear-Sieve}{8}%
 \contentsline {subsection}{\numberline {6.10}Miller-Rabin}{8}%
 \contentsline {subsection}{\numberline {6.11}Mod-Inv}{8}%
 \contentsline {subsection}{\numberline {6.12}Pollard-Rho}{8}%
-\contentsline {subsection}{\numberline {6.13}Primes}{8}%
+\contentsline {subsection}{\numberline {6.13}Primes}{9}%
 \contentsline {subsection}{\numberline {6.14}估計值}{9}%
 \contentsline {subsection}{\numberline {6.15}定理}{9}%
 \contentsline {subsection}{\numberline {6.16}整數除法}{9}%

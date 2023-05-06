@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.4.14)  5 MAY 2023 18:58
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.4.14)  6 MAY 2023 21:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -725,11 +725,11 @@ m/it/7 x[][]\OT1/cmr/m/n/7 )
 (./codes/Graph/HLD.cpp) (./codes/Graph/lowlink.cpp [6]) (./codes/Graph/SCC.cpp)
 (./codes/Math/Aliens.cpp) (./codes/Math/Berlekamp-Massey.cpp)
 (./codes/Math/Chinese-Remainder.cpp) (./codes/Math/Discrete-Log.cpp)
-(./codes/Math/extgcd.cpp) (./codes/Math/Floor-Sum.cpp) [7]
+(./codes/Math/extgcd.cpp) (./codes/Math/Floor-Sum.cpp [7])
 (./codes/Math/FWHT.cpp) (./codes/Math/Gauss-Jordan.cpp)
 (./codes/Math/Linear-Sieve.cpp) (./codes/Math/Miller-Rabin.cpp)
 (./codes/Math/Mod-Inv.cpp) (./codes/Math/Pollard-Rho.cpp)
-(./codes/Math/Primes.cpp) (./codes/Math/估計值.tex [8]
+(./codes/Math/Primes.cpp) [8] (./codes/Math/估計值.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 []\TU/timesnewroman.ttf(0)/m/n/7 Total number of partitions of
  []
@@ -835,8 +835,8 @@ Overfull \hbox (42.97871pt too wide) in paragraph at lines 20--21
 sy/m/n/7 ) [][] []\OML/cmm/m/it/7 a[]a[] [] a[]$ 
  []
 
-) (./codes/Misc/fast.cpp) (./codes/Misc/next-combination.cpp)
-(./codes/Misc/PBDS.cpp [9])
+) (./codes/Misc/fast.cpp) (./codes/Misc/next-combination.cpp [9])
+(./codes/Misc/PBDS.cpp)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
@@ -863,12 +863,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 11897 strings out of 481804
- 243594 string characters out of 5937876
- 1569559 words of memory out of 5000000
- 28522 multiletter control sequences out of 15000+600000
+ 11902 strings out of 481804
+ 243649 string characters out of 5937876
+ 1569567 words of memory out of 5000000
+ 28527 multiletter control sequences out of 15000+600000
  534293 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 46i,15n,69p,539b,2153s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,15n,69p,539b,2147s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Codebook.pdf (13 pages).

@@ -1,5 +1,4 @@
 using P = pair<ll, ll>;
-
 P operator+(P a, P b) { return P{a.X + b.X, a.Y + b.Y}; }
 P operator-(P a, P b) { return P{a.X - b.X, a.Y - b.Y}; }
 P operator*(P a, ll b) { return P{a.X * b, a.Y * b}; }
@@ -31,3 +30,6 @@ P intersect(P a, P b, P c, P d) {
 	int a124 = cross(b - a, d - a);
 	return (d * a123 - c * a124) / (a123 - a124);
 }
+struct line { P A, B; };
+P vec(line L) { return L.B - L.A; }
+P projection(P p, line L) { return L.A + vec(L) / abs(vec(L)) * dot(p - L.A, vec(L)) / abs(vec(L)); }
