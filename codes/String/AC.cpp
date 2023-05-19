@@ -32,6 +32,5 @@ struct ac_automaton {
 				}
 			}
 		}
-		for(auto u : que) node[u].cnt += node[node[u].fail].cnt;
 	}
 };
