@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.4.14)  19 MAY 2023 19:27
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.4.14)  19 MAY 2023 19:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -676,7 +676,28 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
-) (./list.tex
+)
+
+LaTeX Font Warning: Font shape `TU/timesnewroman.ttf(0)/m/sc' undefined
+(Font)              using `TU/timesnewroman.ttf(0)/m/n' instead on input line 2
+0.
+
+(./Codebook.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `Codebook.toc'.
+
+ [1
+
+] (./list.tex
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
@@ -688,23 +709,13 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
 (./codes/Basic/vimrc.cpp) (./codes/Data-Structure/DLX.cpp)
 (./codes/Data-Structure/fast-set.cpp) (./codes/Data-Structure/lazysegtree.cpp
-[1
+[2
 
 ]) (./codes/Data-Structure/segtree.cpp)
 (./codes/Data-Structure/sparse-table.cpp) (./codes/Data-Structure/treap.cpp)
-(./codes/Data-Structure/動態凸包.cpp [2]) (./codes/Data-Structure/回滾DSU.cpp)
+(./codes/Data-Structure/動態凸包.cpp [3]) (./codes/Data-Structure/回滾DSU.cpp)
 (./codes/Flow-Matching/Dinic-LowerBound.cpp) (./codes/Flow-Matching/Dinic.cpp)
 (./codes/Flow-Matching/Flow建模.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
 Underfull \hbox (badness 6284) in paragraph at lines 19--22
 []\TU/timesnewroman.ttf(0)/m/n/7 Construct minimum vertex cover from maximum
  []
@@ -716,20 +727,20 @@ ML/cmm/m/it/7 c[]\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 x[] \OT1/cmr/m/n/7 + \OML/cmm/
 m/it/7 x[][]\OT1/cmr/m/n/7 )
  []
 
-[3]) (./codes/Flow-Matching/KM.cpp) (./codes/Flow-Matching/MCMF.cpp)
+[4]) (./codes/Flow-Matching/KM.cpp) (./codes/Flow-Matching/MCMF.cpp)
 (./codes/Flow-Matching/一般圖最大匹配.cpp) (./codes/Flow-Matching/一般圖最小權完美匹配.cpp
-[4]) (./codes/Flow-Matching/二分圖最大匹配.cpp) (./codes/Geometry/convex-hull.cpp)
+[5]) (./codes/Flow-Matching/二分圖最大匹配.cpp) (./codes/Geometry/convex-hull.cpp)
 (./codes/Geometry/point-in-convex-hull.cpp) (./codes/Geometry/point.cpp)
 (./codes/Geometry/polar-angle-sort.cpp) (./codes/Geometry/最近點對.cpp)
-(./codes/Graph/2-SAT.cpp [5]) (./codes/Graph/centroid-tree.cpp)
-(./codes/Graph/HLD.cpp) (./codes/Graph/lowlink.cpp [6]) (./codes/Graph/SCC.cpp)
+(./codes/Graph/2-SAT.cpp [6]) (./codes/Graph/centroid-tree.cpp)
+(./codes/Graph/HLD.cpp) (./codes/Graph/lowlink.cpp [7]) (./codes/Graph/SCC.cpp)
 (./codes/Math/Aliens.cpp) (./codes/Math/Berlekamp-Massey.cpp)
 (./codes/Math/Chinese-Remainder.cpp) (./codes/Math/Discrete-Log.cpp)
-(./codes/Math/extgcd.cpp) (./codes/Math/Floor-Sum.cpp [7])
+(./codes/Math/extgcd.cpp) (./codes/Math/Floor-Sum.cpp [8])
 (./codes/Math/FWHT.cpp) (./codes/Math/Gauss-Jordan.cpp)
 (./codes/Math/Linear-Sieve.cpp) (./codes/Math/Miller-Rabin.cpp)
 (./codes/Math/Mod-Inv.cpp) (./codes/Math/Pollard-Rho.cpp)
-(./codes/Math/Primes.cpp) [8] (./codes/Math/估計值.tex
+(./codes/Math/Primes.cpp) [9] (./codes/Math/估計值.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 []\TU/timesnewroman.ttf(0)/m/n/7 Total number of partitions of
  []
@@ -841,7 +852,7 @@ Overfull \hbox (42.97871pt too wide) in paragraph at lines 20--21
 sy/m/n/7 ) [][] []\OML/cmm/m/it/7 a[]a[] [] a[]$ 
  []
 
-) (./codes/Misc/fast.cpp [9]) (./codes/Misc/next-combination.cpp)
+) (./codes/Misc/fast.cpp [10]) (./codes/Misc/next-combination.cpp)
 (./codes/Misc/PBDS.cpp)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -849,21 +860,9 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 (./codes/Misc/python.py) (./codes/Misc/rng.cpp) (./codes/Misc/rotate90.cpp)
 (./codes/Misc/timer.cpp) (./codes/Misc/矩形覆蓋面積.cpp) (./codes/String/AC.cpp)
 (./codes/String/KMP.cpp) (./codes/String/LCP.cpp) (./codes/String/manacher.cpp)
-(./codes/String/rolling-hash.cpp) [10] (./codes/String/SAIS.cpp)
+(./codes/String/rolling-hash.cpp) [11] (./codes/String/SAIS.cpp)
 (./codes/String/SAM.cpp) (./codes/String/smallest-rotation.cpp)
-(./codes/String/Z.cpp)) [11]
-
-LaTeX Font Warning: Font shape `TU/timesnewroman.ttf(0)/m/sc' undefined
-(Font)              using `TU/timesnewroman.ttf(0)/m/n' instead on input line 3
-5.
-
-(./Codebook.toc)
-\tf@toc=\write3
-\openout3 = `Codebook.toc'.
-
- [12] (./judge-test/cpp-test.tex) [13
-
-] (./Codebook.aux)
+(./codes/String/Z.cpp)) [12] (./judge-test/cpp-test.tex) [13] (./Codebook.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -875,6 +874,6 @@ Here is how much of TeX's memory you used:
  28527 multiletter control sequences out of 15000+600000
  534293 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 46i,15n,69p,539b,2147s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,15n,69p,539b,2146s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Codebook.pdf (13 pages).
