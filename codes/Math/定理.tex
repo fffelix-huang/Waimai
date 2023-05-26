@@ -11,6 +11,33 @@ $$
 C(n + m, k) = \sum_{i=0}^k C(n, i)C(m, k - i)
 $$
 
+\item Burnside's Lemma
+
+Let us calculate the number of necklaces of $n$ pearls, where each pearl has $m$ possible colors. Two necklaces are symmetric if they are similar after rotating them. There are $n$ ways to change the position of a necklace, because we can rotate it $0, 1, \dots, n_1$ steps clockwise. If the number of steps is 0, all $m^n$ necklaces remain the same, and if the number of steps is $1$, only the $m$ necklaces where each pearl has the same color remain the same. More generally, when the number of steps is $k$, a total of $m^\gcd(k,n)$ necklaces remain the same. The reason for this is that blocks of pearls of size $\gcd(k, n)$ will replace each other. Thus, according to Burnside’s lemma, the number of necklaces is $\sum_{i = 0}^{n - 1} \frac{m^\gcd(i, n)}{n}$. For example, the number of necklaces of length $4$ with $3$ colors is $\frac{3^4 + 3 + 3^2 + 3}{4} = 24$
+
+\item Lindström–Gessel–Viennot Lemma
+
+## 定義
+
+$\omega(P)$ 表示 $P$ 這條路徑上所有邊的邊權之積。 （路徑計數時，可以將邊權都設為 $1$）（事實上，邊權可以為生成函數）
+$e(u, v)$ 表示 $u$ 到 $v$ 的 **每一條** 路徑 $P$ 的 $\omega(P)$ 之和，即 $e(u, v)=\sum\limits_{P:u\rightarrow v}\omega(P)$。
+起點集合 $A$，是有向無環圖點集的一個子集，大小為 $n$。終點集合 $B$，也是有向無環圖點集的一個子集，大小也為 $n$。
+一組 $A\rightarrow B$ 的不相交路徑 $S$：$S_i$ 是一條從 $A_i$ 到 $B_{\sigma(S)_i}$ 的路徑（$\sigma(S)$ 是一個排列），對於任何 $i\ne j$，$S_i$ 和 $S_j$ 沒有公共頂點。
+$t(\sigma)$ 表示排列 $\sigma$ 的逆序對個數。
+
+$$
+M = \begin{bmatrix}e(A_1,B_1)&e(A_1,B_2)&\cdots&e(A_1,B_n)\\
+e(A_2,B_1)&e(A_2,B_2)&\cdots&e(A_2,B_n)\\
+\vdots&\vdots&\ddots&\vdots\\
+e(A_n,B_1)&e(A_n,B_2)&\cdots&e(A_n,B_n)\end{bmatrix}
+$$
+
+$$
+\det(M)=\sum\limits_{S:A\rightarrow B}(-1)^{t(\sigma(S))}\prod\limits_{i=1}^n \omega(S_i)
+$$
+
+其中 $\sum\limits_{S:A\rightarrow B}$ 表示滿足上文要求的 $A\rightarrow B$ 的每一組不相交路徑 $S$。
+
 \item Kirchhoff's Theorem
 
 Denote $L$ be a $n \times n$ matrix as the Laplacian matrix of graph $G$, where $L_{ii} = d(i)$, $L_{ij} = -c$ where $c$ is the number of edge $(i, j)$ in $G$.
