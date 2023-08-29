@@ -1,6 +1,7 @@
 vi primes, least = {0, 1}, phi, mobius;
 void LinearSieve(int n) {
 	least = phi = mobius = vi(n + 1);
+	mobius[1] = 1;
 	for(int i = 2; i <= n; i++) {
 		if(!least[i]) {
 			least[i] = i;

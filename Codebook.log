@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.4.14)  27 MAY 2023 11:40
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.6.22)  29 AUG 2023 16:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,7 +729,7 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 (./codes/Data-Structure/segtree.cpp) (./codes/Data-Structure/sparse-table.cpp)
 (./codes/Data-Structure/static-range-inversion.cpp [5])
 (./codes/Data-Structure/static-range-lis.cpp) (./codes/Data-Structure/treap.cpp
-) (./codes/Data-Structure/union-of-rectangles.cpp [6])
+) [6] (./codes/Data-Structure/union-of-rectangles.cpp)
 (./codes/Data-Structure/wavelet-tree.cpp)
 (./codes/Flow-Matching/bipartite-matching.cpp)
 (./codes/Flow-Matching/Dinic-LowerBound.cpp) (./codes/Flow-Matching/Dinic.cpp
@@ -747,14 +747,14 @@ m/it/7 x[][]\OT1/cmr/m/n/7 )
 
 ) (./codes/Flow-Matching/general-matching.cpp)
 (./codes/Flow-Matching/general-weighted-max-matching.cpp [8])
-(./codes/Flow-Matching/KM.cpp) (./codes/Flow-Matching/max-clique.cpp [9])
+(./codes/Flow-Matching/KM.cpp) [9] (./codes/Flow-Matching/max-clique.cpp)
 (./codes/Flow-Matching/MCMF.cpp)
 Underfull \hbox (badness 10000) in paragraph at lines 31--31
 |[]\TU/timesnewroman.ttf(0)/b/n/12 minimum-general-weighted-
  []
 
 (./codes/Flow-Matching/minimum-general-weighted-perfect-matching.cpp)
-(./codes/Geometry/closest-pair.cpp) (./codes/Geometry/convex-hull.cpp) [10]
+(./codes/Geometry/closest-pair.cpp) (./codes/Geometry/convex-hull.cpp [10])
 (./codes/Geometry/point-in-convex-hull.cpp) (./codes/Geometry/point.cpp)
 (./codes/Geometry/polar-angle-sort.cpp) (./codes/Graph/2-SAT.cpp)
 (./codes/Graph/centroid-tree.cpp) (./codes/Graph/chromatic-number.cpp)
@@ -763,12 +763,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--31
 (./codes/Graph/triangle-sum.cpp [12]) (./codes/Math/Aliens.cpp)
 (./codes/Math/Berlekamp-Massey.cpp) (./codes/Math/Chinese-Remainder.cpp)
 (./codes/Math/Combination.cpp) (./codes/Math/Determinant.cpp)
-(./codes/Math/Discrete-Log.cpp) (./codes/Math/extgcd.cpp) [13]
+(./codes/Math/Discrete-Log.cpp) (./codes/Math/extgcd.cpp [13])
 (./codes/Math/Floor-Sum.cpp) (./codes/Math/FWHT.cpp)
-(./codes/Math/Gauss-Jordan.cpp) (./codes/Math/Int-Div.cpp)
-(./codes/Math/Linear-Sieve.cpp) (./codes/Math/Miller-Rabin.cpp)
-(./codes/Math/Min-of-Mod-of-Linear.cpp) (./codes/Math/Mod-Inv.cpp)
-(./codes/Math/Pollard-Rho.cpp [14]) (./codes/Math/Primes.cpp)
+(./codes/Math/Gauss-Jordan.cpp) (./codes/Math/GCD-Convolution.cpp)
+(./codes/Math/Int-Div.cpp) (./codes/Math/Linear-Sieve.cpp [14])
+(./codes/Math/Miller-Rabin.cpp) (./codes/Math/Min-of-Mod-of-Linear.cpp)
+(./codes/Math/Mod-Inv.cpp) (./codes/Math/Pollard-Rho.cpp)
+(./codes/Math/Primes.cpp) (./codes/Math/Triangle.cpp)
 (./codes/Math/Xor-Basis.cpp) (./codes/Math/估計值.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 []\TU/timesnewroman.ttf(0)/m/n/7 Total number of partitions of
@@ -790,7 +791,7 @@ OT1/cmr/m/n/7 21147\OML/cmm/m/it/7 ; \OT1/cmr/m/n/7 115975\OML/cmm/m/it/7 ; \OT
 1/cmr/m/n/7 678570\OML/cmm/m/it/7 ; \OT1/cmr/m/n/7 4213597\OML/cmm/m/it/7 ;$ 
  []
 
-) (./codes/Math/定理.tex
+) (./codes/Math/定理.tex [15]
 ! Missing { inserted.
 <to be read again> 
                    \mathop 
@@ -890,7 +891,7 @@ ML/cmm/m/it/7 g\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 d\OT1/cmr/m/n/7 ) \OMS/cmsy/m/n/
 7 , \OML/cmm/m/it/7 g\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 n\OT1/cmr/m/n/7 ) =
  []
 
-) (./codes/Math/數字.tex [15]
+) (./codes/Math/數字.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 []$\OML/cmm/m/it/7 S[]\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 n\OT1/cmr/m/n/7 ) = [] \O
 ML/cmm/m/it/7 k[] \OT1/cmr/m/n/7 =
@@ -946,29 +947,28 @@ Overfull \hbox (42.97871pt too wide) in paragraph at lines 20--21
 sy/m/n/7 ) [][] []\OML/cmm/m/it/7 a[]a[] [] a[]$ 
  []
 
-) (./codes/Misc/fast.cpp) (./codes/Misc/for.cpp)
+[16]) (./codes/Misc/fast.cpp) (./codes/Misc/for.cpp)
 (./codes/Misc/next-combination.cpp) (./codes/Misc/PBDS.cpp)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 (./codes/Misc/python.py) (./codes/Misc/rng.cpp) (./codes/Misc/rotate90.cpp)
-(./codes/Misc/timer.cpp) (./codes/String/AC.cpp [16]) (./codes/String/KMP.cpp)
+(./codes/Misc/timer.cpp) (./codes/String/AC.cpp) (./codes/String/KMP.cpp)
 (./codes/String/LCP.cpp) (./codes/String/manacher.cpp)
-(./codes/String/rolling-hash.cpp) (./codes/String/SAIS.cpp)
+(./codes/String/rolling-hash.cpp) (./codes/String/SAIS.cpp [17])
 (./codes/String/SAM.cpp) (./codes/String/smallest-rotation.cpp)
-(./codes/String/Z.cpp)) [17] [18] (./judge-test/cpp-test.tex) [19]
-(./Codebook.aux)
+(./codes/String/Z.cpp)) [18] (./judge-test/cpp-test.tex) [19] (./Codebook.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 12477 strings out of 481804
- 256403 string characters out of 5937876
- 1628113 words of memory out of 5000000
- 29048 multiletter control sequences out of 15000+600000
+ 12519 strings out of 481804
+ 257117 string characters out of 5937876
+ 1662437 words of memory out of 5000000
+ 29084 multiletter control sequences out of 15000+600000
  534293 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 46i,15n,69p,1013b,2261s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,15n,69p,1013b,2289s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on Codebook.pdf (19 pages).
