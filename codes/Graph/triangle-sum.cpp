@@ -2,7 +2,7 @@
 int triangle_sum(vector<array<int, 2>> edges, vi x) {
 	int n = SZ(x);
 	vi deg(n);
-	vector<vector<int>> g(n);
+	vector<vi> g(n);
 	for(auto& [u, v] : edges) {
 		if(u > v) swap(u, v);
 		deg[u]++, deg[v]++;

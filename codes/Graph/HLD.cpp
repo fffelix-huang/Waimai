@@ -60,7 +60,7 @@ struct HLD {
 		return seg;
 	}
 	void dfs_sz(int u) {
-		if(par[u] != -1) g[u].erase(find(all(g[u]), par[u]));
+		if(par[u] != -1) g[u].erase(find(ALL(g[u]), par[u]));
 		siz[u] = 1;
 		for(auto& v : g[u]) {
 			par[v] = u;
@@ -71,8 +71,8 @@ struct HLD {
 		}
 	}
 	void dfs_link(vector<pii>& euler_tour, int u) {
-		fi[u] = sz(euler_tour);
-		id[u] = sz(tour);
+		fi[u] = SZ(euler_tour);
+		id[u] = SZ(tour);
 		euler_tour.eb(depth[u], u);
 		tour.pb(u);
 		for(auto v : g[u]) {

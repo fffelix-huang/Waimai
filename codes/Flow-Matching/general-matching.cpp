@@ -6,14 +6,14 @@ struct GeneralMaxMatch {
 	bool dfs(int u) {
 		if(vis[u]) return false;
 		vis[u] = true;
-		for(int ei = g[u]; ei != -1; ) {
+		for(int ei = g[u]; ei != -1;) {
 			auto [x, y] = es[ei]; ei = y;
 			if(mate[x] == -1) {
 				mate[mate[u] = x] = u;
 				return true;
 			}
 		}
-		for(int ei = g[u]; ei != -1; ) {
+		for(int ei = g[u]; ei != -1;) {
 			auto [x, y] = es[ei]; ei = y;
 			int nu = mate[x];
 			mate[mate[u] = x] = u;
@@ -27,16 +27,15 @@ struct GeneralMaxMatch {
 	void add_edge(int a, int b) {
 		auto f = [&](int a, int b) {
 			es.eb(b, g[a]);
-			g[a] = sz(es) - 1;
+			g[a] = SZ(es) - 1;
 		};
 		f(a, b); f(b, a);
 	}
 	int solve() {
-		vi o(n);
-		iota(all(o), 0);
+		vi o(n); iota(ALL(o), 0);
 		int ans = 0;
 		REP(it, 100) {
-			shuffle(all(o), rng);
+			shuffle(ALL(o), rng);
 			vis.assign(n, false);
 			for(auto i : o) if(mate[i] == -1) ans += dfs(i);
 		}

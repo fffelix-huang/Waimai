@@ -19,7 +19,7 @@ struct lazy_segtree {
 		lz[k] = id();
 	}
 	lazy_segtree(int _n) : lazy_segtree(vector<S>(_n, e())) {}
-	lazy_segtree(const vector<S>& v) : n(sz(v)) {
+	lazy_segtree(const vector<S>& v) : n(SZ(v)) {
 		log = __lg(2 * n - 1), size = 1 << log;
 		d.resize(size * 2, e());
 		lz.resize(size, id());
@@ -48,8 +48,7 @@ struct lazy_segtree {
 		while(l < r) {
 			if(l & 1) sml = op(sml, d[l++]);
 			if(r & 1) smr = op(d[--r], smr);
-			l >>= 1;
-			r >>= 1;
+			l >>= 1, r >>= 1;
 		}
 		return op(sml, smr);
 	}
@@ -72,8 +71,7 @@ struct lazy_segtree {
 			while(l < r) {
 				if(l & 1) all_apply(l++, f);
 				if(r & 1) all_apply(--r, f);
-				l >>= 1;
-				r >>= 1;
+				l >>= 1, r >>= 1;
 			}
 			l = l2;
 			r = r2;

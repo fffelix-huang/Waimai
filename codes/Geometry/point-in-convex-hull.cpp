@@ -1,7 +1,7 @@
 int point_in_convex_hull(const vector<P>& a, P p) {
 	// -1 ON, 0 OUT, +1 IN
 	// 要先逆時針排序
-	int n = sz(a);
+	int n = SZ(a);
 	if(btw(a[0], a[1], p) || btw(a[0], a[n - 1], p)) return -1;
 	int l = 0, r = n - 1;
 	while(l <= r) {

@@ -6,8 +6,8 @@ struct lowlink {
 	vector<bool> is_bridge, is_cut, is_tree_edge;
 	lowlink(int _n) : n(_n), g(_n), is_cut(_n, false), id(_n, -1), low(_n, -1) {}
 	void add_edge(int u, int v) {
-		g[u].eb(v, sz(edges));
-		g[v].eb(u, sz(edges));
+		g[u].eb(v, SZ(edges));
+		g[v].eb(u, SZ(edges));
 		edges.eb(u, v);
 		is_bridge.pb(false);
 		is_tree_edge.pb(false);
@@ -22,9 +22,8 @@ struct lowlink {
 		for(auto [v, eid] : g[u]) {
 			if(eid == peid) continue;
 			if(id[v] < id[u]) stk.pb(eid);
-			if(id[v] >= 0) {
-				low[u] = min(low[u], id[v]);
-			} else {
+			if(id[v] >= 0) low[u] = min(low[u], id[v]);
+			else {
 				is_tree_edge[eid] = true;
 				dfs(v, eid);
 				low[u] = min(low[u], low[v]);
@@ -45,7 +44,7 @@ struct lowlink {
 	}
 	void build() {
 		REP(i, n) if(id[i] < 0) dfs(i);
-		REP(i, sz(edges)) {
+		REP(i, SZ(edges)) {
 			auto [u, v] = edges[i];
 			if(id[u] > id[v]) swap(u, v);
 			is_bridge[i] = (id[u] < low[v]);
@@ -59,12 +58,10 @@ struct lowlink {
 			if(tecc_id[i] != -1) continue;
 			tecc_id[i] = tecc_cnt;
 			stk.pb(i);
-			while(sz(stk)) {
+			while(SZ(stk)) {
 				int u = stk.back(); stk.pop_back();
 				for(auto [v, eid] : g[u]) {
-					if(tecc_id[v] >= 0 || is_bridge[eid]) {
-						continue;
-					}
+					if(tecc_id[v] >= 0 || is_bridge[eid]) continue;
 					tecc_id[v] = tecc_cnt;
 					stk.pb(v);
 				}
@@ -77,20 +74,20 @@ struct lowlink {
 	}
 	vector<vi> bcc_vertices() { // 點雙
 		vector<vi> comp(tvcc_cnt);
-		REP(i, sz(edges)) {
+		REP(i, SZ(edges)) {
 			comp[tvcc_id[i]].pb(edges[i].first);
 			comp[tvcc_id[i]].pb(edges[i].second);
 		}
 		for(auto& v : comp) {
-			sort(all(v));
-			v.erase(unique(all(v)), v.end());
+			sort(ALL(v));
+			v.erase(unique(ALL(v)), v.end());
 		}
-		REP(i, n) if(g[i].empty()) comp.pb({i});
+		REP(i, n) if(!SZ(g[i])) comp.pb({i});
 		return comp;
 	}
 	vector<vi> bcc_edges() {
 		vector<vi> ret(tvcc_cnt);
-		REP(i, sz(edges)) ret[tvcc_id[i]].pb(i);
+		REP(i, SZ(edges)) ret[tvcc_id[i]].pb(i);
 		return ret;
 	}
 };

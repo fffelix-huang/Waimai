@@ -3,11 +3,9 @@ T det(vector<vector<T>> a) {
 	T ret = 1;
 	REP(i, n) {
 		int idx = -1;
-		for(int j = i; j < n; j++) {
-			if(a[j][i] != 0) {
-				idx = j;
-				break;
-			}
+		FOR(j, i, n) if(a[j][i] != 0) {
+			idx = j;
+			break;
 		}
 		if(idx == -1) return 0;
 		if(i != idx) {
@@ -17,10 +15,10 @@ T det(vector<vector<T>> a) {
 		ret *= a[i][i];
 		T inv = T(1) / a[i][i];
 		REP(j, n) a[i][j] *= inv;
-		for(int j = i + 1; j < n; j++) {
+		FOR(j, i + 1, n) {
 			T x = a[j][i];
 			if(x == 0) continue;
-			for(int k = i; k < n; k++) {
+			FOR(k, i, n) {
 				a[j][k] -= a[i][k] * x;
 			}
 		}

@@ -1,5 +1,5 @@
 // cnt 要先用 bfs 往回推, 第一次出現的位置是 state.first_pos - |S| + 1
-struct Node { int go[26], len, link, cnt, first_pos; };
+struct Node { int go[26] = {}, len, link, cnt, first_pos; };
 Node SA[N]; int sz;
 void sa_init() { SA[0].link = -1, SA[0].len = 0, sz = 1; }
 int sa_extend(int p, int c) {

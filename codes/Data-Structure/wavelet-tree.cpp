@@ -4,8 +4,8 @@ struct wavelet_tree {
 	vector<T> vals;
 	vi sums;
 	vector<ull> bits;
-	inline void set_bit(int i, ull v) { bits[i >> 6] |= (v << (i & 63)); }
-	inline int get_sum(int i) const { return sums[i >> 6] + __builtin_popcountll(bits[i >> 6] & ((1ULL << (i & 63)) - 1)); }
+	void set_bit(int i, ull v) { bits[i >> 6] |= (v << (i & 63)); }
+	int get_sum(int i) const { return sums[i >> 6] + __builtin_popcountll(bits[i >> 6] & ((1ULL << (i & 63)) - 1)); }
 	wavelet_tree(const vector<T>& _v) : n(SZ(_v)) {
 		vals = sort_unique(_v);
 		log = __lg(2 * vals.size() - 1);
@@ -26,7 +26,7 @@ struct wavelet_tree {
 			}
 			for(int i : v) cnt[(i >> (log - j)) << (log - j)]--;
 		}
-		for(int i = 1; i < (int) sums.size(); i++) sums[i] = sums[i - 1] + __builtin_popcountll(bits[i - 1]);
+		FOR(i, 1, SZ(sums)) sums[i] = sums[i - 1] + __builtin_popcountll(bits[i - 1]);
 	}
 
 	T get_kth(int a, int b, int k) {

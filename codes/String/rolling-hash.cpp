@@ -5,8 +5,8 @@ ll Get(vector<ll>& h, int l, int r) {
 	return (ans + mod) % mod;
 }
 vector<ll> Hash(string s) {
-	vector<ll> ans(sz(s));
+	vector<ll> ans(SZ(s));
 	ans[0] = s[0];
-	for(int i = 1; i < sz(s); i++) ans[i] = (ans[i - 1] * M + s[i]) % mod;
+	for(int i = 1; i < SZ(s); i++) ans[i] = (ans[i - 1] * M + s[i]) % mod;
 	return ans;
 }

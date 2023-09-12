@@ -6,16 +6,16 @@ public:
 		T cap;
 		Edge(int x, int y, T z) : from(x), to(y), cap(z) {}
 	};
-	constexpr T INF = 1e9;
+	constexpr T INF = 1E9;
 	int n;
 	vector<Edge> edges;
 	vector<vi> g;
 	vi cur, h; // h : level graph
 	Dinic(int _n) : n(_n), g(_n) {}
 	void add_edge(int u, int v, T c) {
-		g[u].pb(sz(edges));
+		g[u].pb(SZ(edges));
 		edges.eb(u, v, c);
-		g[v].pb(sz(edges));
+		g[v].pb(SZ(edges));
 		edges.eb(v, u, 0);
 	}
 	bool bfs(int s, int t) {
@@ -40,7 +40,7 @@ public:
 	T dfs(int u, int t, T f) {
 		if(u == t) return f;
 		T r = f;
-		for(int& i = cur[u]; i < sz(g[u]); ++i) {
+		for(int& i = cur[u]; i < SZ(g[u]); ++i) {
 			int j = g[u][i];
 			const auto& e = edges[j];
 			int v = e.to;

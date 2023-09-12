@@ -5,7 +5,7 @@ int discrete_log(int a, int b, int m) {
 	while(j <= n && (e = f = 1LL * e * a % m) != b) A[1LL * e * b % m] = j++;
 	if(e == b) return j;
 	if(__gcd(m, e) == __gcd(m, b))  {
-		for(int i = 2; i < n + 2; ++i) {
+		FOR(i, 2, n + 2) {
 			e = 1LL * e * f % m;
 			if(A.find(e) != A.end()) return n * i - A[e];
 		}

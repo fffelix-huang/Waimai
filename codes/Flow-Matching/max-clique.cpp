@@ -25,26 +25,26 @@ struct max_clique {
 		}
 		REP(i, max_c) buf[i].reset();
 		sort(ALL(rem), [&](P a, P b) { return a.col < b.col; });
-		for(; !rem.empty(); rem.pop_back()){
+		for(;SZ(rem); rem.pop_back()){
 			auto& p = rem.back();
-			if(now.size() + p.col + 1 <= clique.size()) break;
+			if(SZ(now) + p.col + 1 <= SZ(clique)) break;
 			vector<P> nrem;
 			B bs;
 			for(auto& q : rem){
 				if(g[p.idx][q.idx]){
-					nrem.emplace_back(q.idx, -1, 0);
+					nrem.eb(q.idx, -1, 0);
 					bs[q.idx] = 1;
 				}
 			}
 			for(auto& q : nrem) q.deg = (bs & g[q.idx]).count();
-			now.emplace_back(p.idx);
+			now.eb(p.idx);
 			dfs(nrem);
 			now.pop_back();
 		}
 	}
 	vector<int> solve(){
 		vector<P> remark;
-		REP(i, n) remark.emplace_back(i, -1, SZ(g[i]));
+		REP(i, n) remark.eb(i, -1, SZ(g[i]));
 		dfs(remark);
 		return clique;
 	}

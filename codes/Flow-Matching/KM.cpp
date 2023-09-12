@@ -15,9 +15,8 @@ struct KM {
 		return 0;
 	}
 	void bfs(int s) {
-		fill(all(slk), INF);
-		fill(all(vl), 0);
-		fill(all(vr), 0);
+		fill(ALL(slk), INF);
+		fill(ALL(vl), 0), fill(ALL(vr), 0);
 		ql = qr = 0, qu[qr++] = s, vr[s] = 1;
 		while(true) {
 			T d;
@@ -41,10 +40,10 @@ struct KM {
 		}
 	}
 	T solve() {
-		fill(all(fl), -1);
-		fill(all(fr), -1);
-		fill(all(hr), 0);
-		REP(i, n) hl[i] = *max_element(all(w[i]));
+		fill(ALL(fl), -1);
+		fill(ALL(fr), -1);
+		fill(ALL(hr), 0);
+		REP(i, n) hl[i] = *max_element(ALL(w[i]));
 		REP(i, n) bfs(i);
 		T ans = 0;
 		REP(i, n) ans += w[i][fl[i]]; // i 跟 fl[i] 配對

@@ -8,7 +8,7 @@ struct ac_automaton {
 	vi que;
 	int new_node() { return node.eb(), SZ(node) - 1; }
 	Node& operator[](int i) { return node[i]; }
-	ac_automaton() { new_node(); }
+	ac_automaton() { new_node(); } // reserve
 	int insert(const string& s) {
 		int p = 0;
 		for(char c : s) {

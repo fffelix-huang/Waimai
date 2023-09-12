@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.6.22)  5 SEP 2023 20:44
+This is XeTeX, Version 3.14159265-2.6-0.999991 (TeX Live 2019/Debian) (preloaded format=xelatex 2023.6.22)  12 SEP 2023 22:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -692,12 +692,12 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
  [][] []\TU/timesnewroman.ttf(0)/m/n/10 general-weighted-max- 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
  [][] []\TU/timesnewroman.ttf(0)/m/n/10 minimum-general-weighted- 
  []
 
@@ -717,20 +717,21 @@ File: lstlang1.sty 2019/09/10 1.8c listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
-(./codes/Basic/vimrc.cpp) (./codes/Data-Structure/CDQ.cpp)
-(./codes/Data-Structure/CHT.cpp) (./codes/Data-Structure/DLX.cpp)
-(./codes/Data-Structure/fast-set.cpp) (./codes/Data-Structure/lazysegtree.cpp
+(./codes/Basic/template.cpp) (./codes/Basic/vimrc.cpp)
+(./codes/Data-Structure/CDQ.cpp) (./codes/Data-Structure/CHT.cpp)
+(./codes/Data-Structure/DLX.cpp) (./codes/Data-Structure/lazysegtree.cpp
 [2
 
-]) (./codes/Data-Structure/LCT.cpp [3]) (./codes/Data-Structure/LiChao.cpp)
-(./codes/Data-Structure/rect-add-rect-sum.cpp)
+]) (./codes/Data-Structure/LCT.cpp) (./codes/Data-Structure/LiChao.cpp)
+(./codes/Data-Structure/rect-add-rect-sum.cpp [3])
 (./codes/Data-Structure/rollback-dsu.cpp)
 (./codes/Data-Structure/segtree-beats.cpp [4])
 (./codes/Data-Structure/segtree.cpp) (./codes/Data-Structure/sparse-table.cpp)
-(./codes/Data-Structure/static-range-inversion.cpp [5])
-(./codes/Data-Structure/static-range-lis.cpp) (./codes/Data-Structure/treap.cpp
-) [6] (./codes/Data-Structure/union-of-rectangles.cpp)
-(./codes/Data-Structure/wavelet-tree.cpp)
+(./codes/Data-Structure/static-range-inversion.cpp)
+(./codes/Data-Structure/static-range-lis.cpp [5])
+(./codes/Data-Structure/treap.cpp)
+(./codes/Data-Structure/union-of-rectangles.cpp)
+(./codes/Data-Structure/VEB.cpp [6]) (./codes/Data-Structure/wavelet-tree.cpp)
 (./codes/Flow-Matching/bipartite-matching.cpp)
 (./codes/Flow-Matching/Dinic-LowerBound.cpp) (./codes/Flow-Matching/Dinic.cpp
 [7]) (./codes/Flow-Matching/Flow建模.tex
@@ -747,9 +748,9 @@ m/it/7 x[][]\OT1/cmr/m/n/7 )
 
 ) (./codes/Flow-Matching/general-matching.cpp)
 (./codes/Flow-Matching/general-weighted-max-matching.cpp [8])
-(./codes/Flow-Matching/KM.cpp) [9] (./codes/Flow-Matching/max-clique.cpp)
+(./codes/Flow-Matching/KM.cpp) (./codes/Flow-Matching/max-clique.cpp [9])
 (./codes/Flow-Matching/MCMF.cpp)
-Underfull \hbox (badness 10000) in paragraph at lines 31--31
+Underfull \hbox (badness 10000) in paragraph at lines 32--32
 |[]\TU/timesnewroman.ttf(0)/b/n/12 minimum-general-weighted-
  []
 
@@ -770,9 +771,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--31
 (./codes/Math/Gauss-Jordan.cpp) (./codes/Math/GCD-Convolution.cpp)
 (./codes/Math/Int-Div.cpp) (./codes/Math/Linear-Sieve.cpp)
 (./codes/Math/Miller-Rabin.cpp) (./codes/Math/Min-of-Mod-of-Linear.cpp)
-(./codes/Math/Mod-Inv.cpp [15]) (./codes/Math/Pollard-Rho.cpp)
-(./codes/Math/Primes.cpp) (./codes/Math/Triangle.cpp)
-(./codes/Math/Xor-Basis.cpp) (./codes/Math/估計值.tex
+(./codes/Math/Mod-Inv.cpp) (./codes/Math/Mod-Sqrt.cpp [15])
+(./codes/Math/NTT.cpp) (./codes/Math/Pollard-Rho.cpp) (./codes/Math/Poly.cpp
+[16]) (./codes/Math/Primes.cpp) (./codes/Math/Simplex.cpp)
+(./codes/Math/Triangle.cpp) (./codes/Math/Xor-Basis.cpp [17])
+(./codes/Math/估計值.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--10
 []\TU/timesnewroman.ttf(0)/m/n/7 Total number of partitions of
  []
@@ -875,7 +878,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 \TU/timesnewroman.ttf(0)/m/n/7 for each labeled vertices, there are
  []
 
-[16]
 Missing character: There is no ő in font [fonts/times new roman.ttf]/OT:languag
 e=dflt;mapping=tex-text;!
 Missing character: There is no ö in font [fonts/times new roman.ttf]/OT:languag
@@ -932,7 +934,7 @@ Overfull \hbox (66.47742pt too wide) detected at line 30
 [][]
  []
 
-) (./codes/Math/生成函數.tex
+[18]) (./codes/Math/生成函數.tex
 Overfull \hbox (1.49915pt too wide) in paragraph at lines 9--10
 []$\OML/cmm/m/it/7 A\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 x\OT1/cmr/m/n/7 )[] \OMS/cm
 sy/m/n/7 ) [][] \OML/cmm/m/it/7 a[]a[] [] a[]$ 
@@ -950,28 +952,28 @@ Overfull \hbox (42.97871pt too wide) in paragraph at lines 20--21
 sy/m/n/7 ) [][] []\OML/cmm/m/it/7 a[]a[] [] a[]$ 
  []
 
-) (./codes/Misc/fast.cpp) (./codes/Misc/for.cpp)
-(./codes/Misc/next-combination.cpp) (./codes/Misc/PBDS.cpp)
+) (./codes/Misc/gc.cpp) (./codes/Misc/next-combination.cpp)
+(./codes/Misc/PBDS.cpp)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
-(./codes/Misc/python.py) (./codes/Misc/rng.cpp) [17] (./codes/Misc/rotate90.cpp
-) (./codes/Misc/timer.cpp) (./codes/String/AC.cpp) (./codes/String/KMP.cpp)
-(./codes/String/LCP.cpp) (./codes/String/manacher.cpp)
-(./codes/String/rolling-hash.cpp) (./codes/String/SAIS.cpp)
-(./codes/String/SAM.cpp [18]) (./codes/String/smallest-rotation.cpp)
-(./codes/String/Z.cpp)) [19] (./judge-test/cpp-test.tex) [20] (./Codebook.aux)
+(./codes/Misc/python.py) (./codes/Misc/rng.cpp) (./codes/Misc/rotate90.cpp)
+(./codes/Misc/timer.cpp) (./codes/String/AC.cpp) (./codes/String/hash61.cpp)
+(./codes/String/KMP.cpp) (./codes/String/LCP.cpp) (./codes/String/manacher.cpp
+[19]) (./codes/String/rolling-hash.cpp) (./codes/String/SAIS.cpp)
+(./codes/String/SAM.cpp) (./codes/String/smallest-rotation.cpp)
+(./codes/String/Z.cpp)) [20] (./judge-test/cpp-test.tex) [21] (./Codebook.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 12593 strings out of 481804
- 258118 string characters out of 5937876
- 1663790 words of memory out of 5000000
- 29147 multiletter control sequences out of 15000+600000
+ 12679 strings out of 481804
+ 259500 string characters out of 5937876
+ 1667784 words of memory out of 5000000
+ 29218 multiletter control sequences out of 15000+600000
  534293 words of font info for 64 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 46i,15n,69p,1013b,2309s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,15n,69p,1013b,2313s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on Codebook.pdf (20 pages).
+Output written on Codebook.pdf (21 pages).

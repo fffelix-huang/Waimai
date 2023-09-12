@@ -10,7 +10,7 @@ struct DLX {
 		}
 		L[0] = m, R[m] = 0;
 	}
-	void insert(int r, int c) {
+	void insert(int r, int c) { // (r, c) is 1
 		r++, c++;
 		col[++tot] = c, row[tot] = r, ++siz[c];
 		D[tot] = D[c], U[D[c]] = tot, U[tot] = c, D[c] = tot;

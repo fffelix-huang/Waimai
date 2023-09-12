@@ -39,7 +39,7 @@ struct static_range_inversion {
 			fenw.add(a[i], -1);
 		};
 		int l = 0, r = 0;
-		for(int i = 0; i < q; i++) {
+		REP(i, q) {
 			int id = ord[i], ql = L[id], qr = R[id];
 			while(l > ql) AL(--l);
 			while(r < qr) AR(r++);

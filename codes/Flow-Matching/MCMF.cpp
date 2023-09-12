@@ -7,7 +7,7 @@ public:
 		T cost;
 		Edge(int u, int v, S x, T y) : from(u), to(v), cap(x), cost(y) {}
 	};
-	const ll INF = 1e18L;
+	const ll INF = 1E18L;
 	int n;
 	vector<Edge> edges;
 	vector<vi> g;
@@ -16,14 +16,14 @@ public:
 	vi pedge;
 	MCMF(int _n) : n(_n), g(_n), d(_n), inq(_n), pedge(_n) {}
 	void add_edge(int u, int v, S cap, T cost) {
-		g[u].pb(sz(edges));
+		g[u].pb(SZ(edges));
 		edges.eb(u, v, cap, cost);
-		g[v].pb(sz(edges));
+		g[v].pb(SZ(edges));
 		edges.eb(v, u, 0, -cost);
 	}
 	bool spfa(int s, int t) {
 		bool found = false;
-		fill(all(d), INF);
+		fill(ALL(d), INF);
 		d[s] = 0;
 		inq[s] = true;
 		queue<int> q;

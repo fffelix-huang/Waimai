@@ -8,7 +8,7 @@ void PollardRho(map<ll, int>& mp, ll n) {
 	}
 	ll x = 2, y = 2, d = 1, p = 1;
 	#define f(x, n, p) ((i128(x) * x % n + p) % n)
-	while(true) {
+	while(1) {
 		if(d != 1 && d != n) {
 			PollardRho(mp, d);
 			PollardRho(mp, n / d);
@@ -25,10 +25,10 @@ vector<ll> get_divisors(ll n) {
 	if(n == 0) return {};
 	map<ll, int> mp;
 	PollardRho(mp, n);
-	vector<pair<ll, int>> v(all(mp));
+	vector<pair<ll, int>> v(ALL(mp));
 	vector<ll> res;
 	auto f = [&](auto f, int i, ll x) -> void {
-		if(i == sz(v)) {
+		if(i == SZ(v)) {
 			res.pb(x);
 			return;
 		}
@@ -39,6 +39,6 @@ vector<ll> get_divisors(ll n) {
 		}
 	};
 	f(f, 0, 1);
-	sort(all(res));
+	sort(ALL(res));
 	return res;
 }

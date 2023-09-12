@@ -2,10 +2,10 @@ template<class T, T (*op)(T, T)>
 struct sparse_table {
 	int n;
 	vector<vector<T>> b;
-	sparse_table(const vector<T>& a) : n(sz(a)) {
+	sparse_table(const vector<T>& a) : n(SZ(a)) {
 		int lg = __lg(n) + 1;
 		b.resize(lg); b[0] = a;
-		for(int j = 1; j < lg; ++j) {
+		FOR(j, 1, lg) {
 			b[j].resize(n - (1 << j) + 1);
 			REP(i, n - (1 << j) + 1) b[j][i] = op(b[j - 1][i], b[j - 1][i + (1 << (j - 1))]);
 		}

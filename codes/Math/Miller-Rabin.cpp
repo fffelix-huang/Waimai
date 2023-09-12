@@ -13,12 +13,12 @@ bool is_prime(ll n, vector<ll> x) {
 			y = i128(y) * y % n;
 			t <<= 1;
 		}
-		if(y != n - 1 && t % 2 == 0) return false;
+		if(y != n - 1 && t % 2 == 0) return 0;
 	}
-	return true;
+	return 1;
 }
 bool is_prime(ll n) {
-	if(n <= 1) return false;
+	if(n <= 1) return 0;
 	if(n % 2 == 0) return n == 2;
 	if(n < (1LL << 30)) return is_prime(n, {2, 7, 61});
 	return is_prime(n, {2, 325, 9375, 28178, 450775, 9780504, 1795265022});

@@ -5,12 +5,12 @@ int chromatic_number(vi g) {
 	constexpr int MOD = 998244353;
 	int n = SZ(g);
 	vector<int> I(1 << n); I[0] = 1;
-	for(int s = 1; s < (1 << n); s++) {
+	FOR(s, 1, 1 << n) {
 		int v = __builtin_ctz(s), t = s ^ (1 << v);
 		I[s] = (I[t] + I[t & ~g[v]]) % MOD;
 	}
 	auto f = I;
-	for(int k = 1; k <= n; k++) {
+	FOR(k, 1, n + 1) {
 		int sum = 0;
 		REP(s, 1 << n) {
 			if((__builtin_popcount(s) ^ n) & 1) sum -= f[s];
