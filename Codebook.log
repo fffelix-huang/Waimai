@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.12)  12 MAY 2024 09:24
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.5.12)  31 AUG 2024 00:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -778,11 +778,12 @@ m/it/7 x[][]\OT1/cmr/m/n/7 )
 (./codes/Graph/centroid-tree.cpp [11]) (./codes/Graph/chromatic-number.cpp)
 (./codes/Graph/count-bridge-online.cpp) (./codes/Graph/2-SAT.cpp)
 (./codes/Graph/lowlink.cpp [12]) (./codes/Graph/manhattan-mst.cpp)
-(./codes/Graph/SCC.cpp) (./codes/Graph/HLD.cpp) (./codes/Graph/BCC-tree.cpp)
-(./codes/Graph/triangle-sum.cpp [13]) (./codes/Math/Min-of-Mod-of-Linear.cpp)
-(./codes/Math/Gauss-Jordan.cpp) (./codes/Math/Miller-Rabin.cpp)
-(./codes/Math/Floor-Sum.cpp) (./codes/Math/Discrete-Log.cpp)
-(./codes/Math/Xor-Basis.cpp) (./codes/Math/數字.tex
+(./codes/Graph/SCC.cpp) (./codes/Graph/HLD.cpp) (./codes/Graph/planar.cpp
+[13]) (./codes/Graph/BCC-tree.cpp) (./codes/Graph/triangle-sum.cpp)
+(./codes/Math/Min-of-Mod-of-Linear.cpp) (./codes/Math/Gauss-Jordan.cpp [14])
+(./codes/Math/Miller-Rabin.cpp) (./codes/Math/Floor-Sum.cpp)
+(./codes/Math/Discrete-Log.cpp) (./codes/Math/Xor-Basis.cpp)
+(./codes/Math/數字.tex
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
 []$\OML/cmm/m/it/7 S[]\OT1/cmr/m/n/7 (\OML/cmm/m/it/7 n\OT1/cmr/m/n/7 ) = [] \O
 ML/cmm/m/it/7 k[] \OT1/cmr/m/n/7 =
@@ -799,19 +800,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 = 1 +
  []
 
-[14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 51--52
 []$[][] \OML/cmm/m/it/7 k[] \OT1/cmr/m/n/7 = [](\OML/cmm/m/it/7 n [][]\OT1/cmr/
 m/n/7 (\OML/cmm/m/it/7 n \OT1/cmr/m/n/7 + 1)[] \OMS/cmsy/m/n/7 ^^@
  []
 
-) (./codes/Math/Primes.cpp) (./codes/Math/Determinant.cpp)
+) (./codes/Math/Primes.cpp) (./codes/Math/Determinant.cpp [15])
 (./codes/Math/extgcd.cpp) (./codes/Math/NTT.cpp) (./codes/Math/Poly.cpp
-[15]) (./codes/Math/Simplex.cpp) (./codes/Math/Triangle.cpp)
-(./codes/Math/Chinese-Remainder.cpp) [16] (./codes/Math/Pollard-Rho.cpp)
+[16]) (./codes/Math/Simplex.cpp) (./codes/Math/Triangle.cpp)
+(./codes/Math/Chinese-Remainder.cpp) (./codes/Math/Pollard-Rho.cpp) [17]
 (./codes/Math/Mod-Sqrt.cpp) (./codes/Math/Combination.cpp)
 (./codes/Math/Mod-Inv.cpp) (./codes/Math/FWHT.cpp) (./codes/Math/Aliens.cpp)
-(./codes/Math/Berlekamp-Massey.cpp [17]) (./codes/Math/定理.tex
+(./codes/Math/Berlekamp-Massey.cpp) (./codes/Math/定理.tex [18]
 ! Missing { inserted.
 <to be read again> 
                    \mathop 
@@ -929,7 +930,7 @@ Overfull \hbox (42.97871pt too wide) in paragraph at lines 20--21
 sy/m/n/7 ) [][] []\OML/cmm/m/it/7 a[]a[] [] a[]$ 
  []
 
-) (./codes/Math/GCD-Convolution.cpp [18]) (./codes/Math/歐幾里得類算法.tex
+) (./codes/Math/GCD-Convolution.cpp) (./codes/Math/歐幾里得類算法.tex
 Overfull \hbox (29.75534pt too wide) detected at line 14
 [][]
  []
@@ -939,7 +940,7 @@ Overfull \hbox (66.75389pt too wide) detected at line 22
 [][]
  []
 
-
+[19]
 Overfull \hbox (66.47742pt too wide) detected at line 30
 [][]
  []
@@ -972,10 +973,10 @@ File: lstlang1.sty 2024/03/11 1.10a listings language file
 (./codes/Misc/python.py) (./codes/Misc/timer.cpp)
 (./codes/Misc/next-combination.cpp) (./codes/Misc/rng.cpp) (./codes/Misc/gc.cpp
 ) (./codes/Misc/rotate90.cpp) (./codes/String/smallest-rotation.cpp)
-(./codes/String/AC.cpp [19]) (./codes/String/Z.cpp)
-(./codes/String/rolling-hash.cpp) (./codes/String/hash61.cpp)
-(./codes/String/LCP.cpp) (./codes/String/SAIS.cpp) (./codes/String/KMP.cpp)
-(./codes/String/wildcard-pattern-matching.cpp) (./codes/String/SAM.cpp [20])
+(./codes/String/AC.cpp) (./codes/String/Z.cpp) (./codes/String/rolling-hash.cpp
+[20]) (./codes/String/hash61.cpp) (./codes/String/LCP.cpp)
+(./codes/String/SAIS.cpp) (./codes/String/KMP.cpp)
+(./codes/String/wildcard-pattern-matching.cpp) (./codes/String/SAM.cpp)
 (./codes/String/manacher.cpp)) [21] (./judge-test/cpp-test.tex) [22]
 (./Codebook.aux)
  ***********
@@ -988,12 +989,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 13366 strings out of 474706
- 289195 string characters out of 5756288
+ 13451 strings out of 474706
+ 290429 string characters out of 5756288
  3771403 words of memory out of 5000000
- 35127 multiletter control sequences out of 15000+600000
+ 35209 multiletter control sequences out of 15000+600000
  560574 words of font info for 77 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 84i,15n,96p,1013b,2428s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,96p,1013b,2404s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on Codebook.pdf (22 pages).
